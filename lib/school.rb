@@ -1,6 +1,6 @@
 # code here!
 class School
-  attr_accessor = :name, :roster
+  attr_accessor :name, :roster
 
   def initialize(name)
     @name = name
@@ -8,7 +8,8 @@ class School
   end
 
   def add_student(name, grade)
-    if !@roster[grade] = []
+    if !@roster.key?(grade)
+      @roster[grade] = []
     end
     @roster[grade] << name
   end
@@ -22,4 +23,5 @@ class School
       array.sort!
     end
   end
+
 end
